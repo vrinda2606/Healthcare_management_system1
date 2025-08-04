@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="05bb3f53475222104bebe454116d4326" extends="task" label="Insurance" max_length="40" name="u_insurance" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Insurance Update" max_length="40" name="u_insurance_update" type="string"/>
+    </element>
+</database>

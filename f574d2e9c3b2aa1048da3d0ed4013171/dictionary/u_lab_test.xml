@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="no_attachment=true" audit="true" db_object_id="0efaf713475222104bebe454116d4398" extends="task" label="Lab Test" max_length="40" name="u_lab_test" type="collection">
+        <element attributes="encode_utf8=false" label="Doctor ID" max_length="32" name="u_doctor_id" reference="u_doctor" type="reference"/>
+    </element>
+</database>

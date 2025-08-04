@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="d3da3713475222104bebe454116d43eb" extends="task" label="Medication" max_length="40" name="u_medication" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Reminder Status" max_length="100" name="u_reminder_status" type="string"/>
+    </element>
+</database>

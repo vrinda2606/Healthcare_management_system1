@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d7c58787c37e625048da3d0ed401314a" extends="sys_import_set_row" label="Testing_loading_2" max_length="40" name="u_testing_loading_2" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=priority" label="priority" max_length="50" name="u_priority" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=opened_by" label="opened_by" max_length="100" name="u_opened_by" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=category" label="category" max_length="100" name="u_category" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=short_description" label="short_description" max_length="255" name="u_short_description" type="string"/>
+        <element attributes="import_attribute_name=created" label="created" max_length="40" name="u_created" type="datetime"/>
+        <element attributes="import_attribute_name=updated" label="updated" max_length="40" name="u_updated" type="datetime"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=subcategory" label="subcategory" max_length="100" name="u_subcategory" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=assignment_group" label="assignment_group" max_length="100" name="u_assignment_group" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=state" label="state" max_length="50" name="u_state" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=number" label="number" max_length="40" name="u_number" type="string"/>
+    </element>
+</database>

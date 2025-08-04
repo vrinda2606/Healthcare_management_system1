@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 20:28:02</sys_created_on>
+        <sys_id>c36103c6c3c3e61048da3d0ed4013127</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.healthcare_staff</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_security_acl display_value="u_patient_record">3c61c3c6c3c3e61048da3d0ed401315b</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_c36103c6c3c3e61048da3d0ed4013127</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 20:28:02</sys_updated_on>
+        <sys_user_role display_value="healthcare_staff" name="healthcare_staff">810a7f9f471222104bebe454116d43b9</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

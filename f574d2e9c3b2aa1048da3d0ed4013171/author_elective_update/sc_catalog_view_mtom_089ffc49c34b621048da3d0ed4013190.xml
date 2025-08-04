@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_catalog_view_mtom">
+    <sc_catalog_view_mtom action="DELETE">
+        <default>true</default>
+        <sc_catalog display_value="PracticeCatalog">af7ffc49c34b621048da3d0ed4013187</sc_catalog>
+        <sys_class_name>sc_catalog_view_mtom</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-28 07:09:59</sys_created_on>
+        <sys_id>089ffc49c34b621048da3d0ed4013190</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PracticeCatalog.catalog_practicecatalog</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_policy/>
+        <sys_portal_page display_value="catalog_practicecatalog">0c9ffc49c34b621048da3d0ed401318f</sys_portal_page>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_update_name>sc_catalog_view_mtom_089ffc49c34b621048da3d0ed4013190</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-28 07:09:59</sys_updated_on>
+    </sc_catalog_view_mtom>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</application>
+        <file_path/>
+        <instance_id>40c421cdeb030ed856eafddacad0cd64</instance_id>
+        <instance_name>dev276950</instance_name>
+        <name>sc_catalog_view_mtom_089ffc49c34b621048da3d0ed4013190</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_catalog_view_mtom"><sc_catalog_view_mtom action="INSERT_OR_UPDATE"><default>true</default><sc_catalog display_value="PracticeCatalog">af7ffc49c34b621048da3d0ed4013187</sc_catalog><sys_class_name>sc_catalog_view_mtom</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-28 07:09:59</sys_created_on><sys_id>089ffc49c34b621048da3d0ed4013190</sys_id><sys_mod_count>0</sys_mod_count><sys_name>PracticeCatalog.catalog_practicecatalog</sys_name><sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package><sys_policy/><sys_portal_page display_value="catalog_practicecatalog">0c9ffc49c34b621048da3d0ed401318f</sys_portal_page><sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope><sys_update_name>sc_catalog_view_mtom_089ffc49c34b621048da3d0ed4013190</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-28 07:09:59</sys_updated_on></sc_catalog_view_mtom></record_update>]]></payload>
+        <payload_hash>-1764019080</payload_hash>
+        <record_name>PracticeCatalog.catalog_practicecatalog</record_name>
+        <reverted_from/>
+        <source>8527d6a5c3f2aa1048da3d0ed40131a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-28 07:09:59</sys_created_on>
+        <sys_id>8c9f3089c34b621048da3d0ed40131ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1984fdde8560000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-28 07:09:59</sys_updated_on>
+        <type>Catalog Portal Page</type>
+        <update_guid>809f3089774b6210196264bccf6d3fee</update_guid>
+        <update_guid_history>809f3089774b6210196264bccf6d3fee:-1764019080</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="PracticeCatalog.catalog_practicecatalog">df816205c343a21048da3d0ed4013119</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-28 14:18:06</sys_created_on>
+        <sys_db_object display_value="" name="sc_catalog_view_mtom">sc_catalog_view_mtom</sys_db_object>
+        <sys_id>54db3d60dcc24534a07ff7032415d244</sys_id>
+        <sys_metadata>089ffc49c34b621048da3d0ed4013190</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PracticeCatalog.catalog_practicecatalog</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_scope_delete display_value="">5385ac30dc2e488089130ac587104000</sys_scope_delete>
+        <sys_update_name>sc_catalog_view_mtom_089ffc49c34b621048da3d0ed4013190</sys_update_name>
+        <sys_update_version display_value="sc_catalog_view_mtom_089ffc49c34b621048da3d0ed4013190">8c9f3089c34b621048da3d0ed40131ee</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-28 14:18:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

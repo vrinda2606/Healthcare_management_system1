@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 20:48:21</sys_created_on>
+        <sys_id>37879bc2c347e61048da3d0ed40131b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.healthcare_staff</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_security_acl display_value="">35875bc2c347e61048da3d0ed401319a</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_37879bc2c347e61048da3d0ed40131b7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 20:48:21</sys_updated_on>
+        <sys_user_role display_value="healthcare_staff" name="healthcare_staff">810a7f9f471222104bebe454116d43b9</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</application>
+        <file_path/>
+        <instance_id>40c421cdeb030ed856eafddacad0cd64</instance_id>
+        <instance_name>dev276950</instance_name>
+        <name>sys_security_acl_role_37879bc2c347e61048da3d0ed40131b7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-31 20:48:21</sys_created_on><sys_id>37879bc2c347e61048da3d0ed40131b7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.healthcare_staff</sys_name><sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package><sys_policy/><sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope><sys_security_acl display_value="">35875bc2c347e61048da3d0ed401319a</sys_security_acl><sys_update_name>sys_security_acl_role_37879bc2c347e61048da3d0ed40131b7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-31 20:48:21</sys_updated_on><sys_user_role display_value="healthcare_staff" name="healthcare_staff">810a7f9f471222104bebe454116d43b9</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1063021006</payload_hash>
+        <record_name>.healthcare_staff</record_name>
+        <reverted_from/>
+        <source>8527d6a5c3f2aa1048da3d0ed40131a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 20:48:21</sys_created_on>
+        <sys_id>85a71fc2c347e61048da3d0ed4013184</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198623e39580000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 20:48:21</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>89a71fc2a247e6100499fde1d7eea383</update_guid>
+        <update_guid_history>89a71fc2a247e6100499fde1d7eea383:1063021006</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".healthcare_staff">61e79306c347e61048da3d0ed40131fc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 20:49:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>0a2e82ccbfdd4470a8418a49599729a4</sys_id>
+        <sys_metadata>37879bc2c347e61048da3d0ed40131b7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.healthcare_staff</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_scope_delete display_value="">5385ac30dc2e488089130ac587104000</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_37879bc2c347e61048da3d0ed40131b7</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_37879bc2c347e61048da3d0ed40131b7">85a71fc2c347e61048da3d0ed4013184</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 20:49:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

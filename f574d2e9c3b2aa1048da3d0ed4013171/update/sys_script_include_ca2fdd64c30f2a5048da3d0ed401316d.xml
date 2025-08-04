@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.AppointmentUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AppointmentUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AppointmentUtils = Class.create();
+AppointmentUtils.prototype = {
+	initialize: function () {
+	},
+
+	fetchAllAppointments: function (patientId) {
+		var result = [];
+		var appointmentGR = new GlideRecord('u_appointment');
+		appointmentGR.addQuery('u_patient_id.u_number', patientId);
+		appointmentGR.query();
+		while (appointmentGR.next()) {
+			result.push({
+				patientName: appointmentGR.u_patient_name,
+				doctorId: appointmentGR.getDisplayValue('u_doctor'),
+				status: appointmentGR.getDisplayValue('u_status'),
+				appointmentDate: appointmentGR.u_appointment_date
+			});
+		}
+		return result;
+	},
+
+	checkAppointmentConfirmation: function (appointmentId) {
+		var appointmentGR = new GlideRecord('u_appointment');
+		if (appointmentGR.get(appointmentId)) {
+			if (appointmentGR.u_status == 'confirmed')
+				return true;
+		}
+
+		return false;
+	},
+
+	fetchAppById: function (appointmentId) {
+		var appointmentGR = new GlideRecord('u_appointment');
+		var result = {};
+		if (appointmentGR.get(appointmentId)) {
+			result.name = appointmentGR.u_patient_name;
+			result.patientId = appointmentGR.getDisplayValue('u_patient_id');
+			result.patientAge = appointmentGR.u_patient_age;
+			result.dept = appointmentGR.getDisplayValue('u_department');
+			result.status = appointmentGR.u_status;
+		}
+		return result;
+	},
+
+	fetchAppByDate: function (appointmentDate) {
+		var result = [];
+		var appointmentGR = new GlideRecord('u_appointment');
+		appointmentGR.addQuery('u_appointment_date','STARTSWITH',appointmentDate);
+		appointmentGR.query();
+		while(appointmentGR.next()){
+			result.push({
+				date:appointmentGR.getDisplayValue('u_appointment_date'),
+                sys_id: appointmentGR.getUniqueValue(),
+				u_patient_id : appointmentGR.getDisplayValue('u_patient_id'),
+				patientName: appointmentGR.u_patient_id.u_first_name,
+                status: appointmentGR.u_status + ''
+            });
+		}
+		return result;
+	},
+	fetchAppByDept: function(dept){
+		var result = [];
+		var appointmentGR = new GlideRecord('u_appointment');
+		appointmentGR.addQuery('u_department',dept);
+		appointmentGR.query();
+		while(appointmentGR.next()){
+			result.push({
+                sys_id: appointmentGR.getUniqueValue(),
+				u_patient_id : appointmentGR.getDisplayValue('u_patient_id'),
+				patientName: appointmentGR.u_patient_id.u_first_name,
+                status: appointmentGR.u_status + ''
+            });
+		}
+		return result;
+	},
+
+	type: 'AppointmentUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-26 20:11:55</sys_created_on>
+        <sys_id>ca2fdd64c30f2a5048da3d0ed401316d</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>AppointmentUtils</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_update_name>sys_script_include_ca2fdd64c30f2a5048da3d0ed401316d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 06:07:02</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>ca2fdd64c30f2a5048da3d0ed401316d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-26 20:11:54</sys_created_on>
+        <sys_id>165f55e4c30f2a5048da3d0ed40131cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-26 20:11:54</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

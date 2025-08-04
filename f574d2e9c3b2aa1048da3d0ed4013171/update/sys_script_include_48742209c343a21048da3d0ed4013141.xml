@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.DoctorUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>DoctorUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var DoctorUtils = Class.create();
+DoctorUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    DoctorInfo: function() {
+        var answer = '';
+        var DocInfo = new GlideRecord('u_doctor');
+        DocInfo.query();
+        while (DocInfo.next()) {
+            answer += DocInfo.u_first_name.getDisplayValue() + '--' +
+                      DocInfo.u_last_name.getDisplayValue() + '--' +
+                      DocInfo.u_phone_number.getDisplayValue() + '--' +
+                      DocInfo.u_email.getDisplayValue() + '--' +
+                      DocInfo.u_specialization.getDisplayValue() + '\n';
+        }
+        return answer;
+    },
+
+    DoctorInfoByID: function(DocID) {
+        var answer = '';
+        var DocInfobyID = new GlideRecord('u_doctor');
+        DocInfobyID.addQuery('u_number', DocID);
+        DocInfobyID.query();
+        while (DocInfobyID.next()) {
+            answer = DocInfobyID.u_first_name.getDisplayValue() + '--' +
+                     DocInfobyID.u_last_name.getDisplayValue() + '--' +
+                     DocInfobyID.u_phone_number.getDisplayValue() + '--' +
+                     DocInfobyID.u_email.getDisplayValue() + '--' +
+                     DocInfobyID.u_specialization.getDisplayValue();
+        }
+        return answer;
+    },
+
+    // New Function to fetch doctor by department
+    FetchDoctorByDepartment: function(department) {
+        var result = [];
+        var gr = new GlideRecord('u_doctor');
+        gr.addQuery('u_specialization', department); // use sys_id or name based on your implementation
+        gr.query();
+        while (gr.next()) {
+            var doctor = gr.u_first_name.getDisplayValue() + '--' +
+                         gr.u_last_name.getDisplayValue() + '--' +
+                         gr.u_phone_number.getDisplayValue() + '--' +
+                         gr.u_email.getDisplayValue() + '--' +
+                         gr.u_specialization.getDisplayValue();
+            result.push(doctor);
+        }
+        return result.join('\n');
+    },
+
+    type: 'DoctorUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-28 14:35:37</sys_created_on>
+        <sys_id>48742209c343a21048da3d0ed4013141</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DoctorUtils</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_update_name>sys_script_include_48742209c343a21048da3d0ed4013141</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-28 14:35:37</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>48742209c343a21048da3d0ed4013141</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-28 14:35:36</sys_created_on>
+        <sys_id>2b856e85c343a21048da3d0ed4013184</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-28 14:35:36</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

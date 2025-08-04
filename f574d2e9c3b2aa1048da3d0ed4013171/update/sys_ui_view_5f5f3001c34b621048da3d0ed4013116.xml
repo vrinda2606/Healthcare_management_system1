@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>catalog_catalogpractice</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-28 07:09:07</sys_created_on>
+        <sys_id>5f5f3001c34b621048da3d0ed4013116</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CatalogPractice View</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_update_name>sys_ui_view_5f5f3001c34b621048da3d0ed4013116</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-28 07:09:07</sys_updated_on>
+        <title>CatalogPractice View</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

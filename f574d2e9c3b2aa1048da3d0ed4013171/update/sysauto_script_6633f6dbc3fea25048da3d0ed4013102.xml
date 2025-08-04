@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Insurance_Renew_Insurance</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-07-23 05:05:58</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[(function execute(inputs, outputs) {
+	var insuranceGR = new GlideRecord('u_insurance');
+	insuranceGR.addQuery('u_status', 'expired');
+	insuranceGR.query();
+
+	while (insuranceGR.next()) {
+		gs.eventQueue('patient.renew.insurance', insuranceGR, '', '' );
+	}
+})(inputs, outputs);]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 05:08:04</sys_created_on>
+        <sys_id>6633f6dbc3fea25048da3d0ed4013102</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Insurance_Renew_Insurance</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_update_name>sysauto_script_6633f6dbc3fea25048da3d0ed4013102</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 05:08:04</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>6633f6dbc3fea25048da3d0ed4013102</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 05:08:04</sys_created_on>
+        <sys_id>55b3f21fc3fea25048da3d0ed401317d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 05:08:04</sys_updated_on>
+        <table>sysauto_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

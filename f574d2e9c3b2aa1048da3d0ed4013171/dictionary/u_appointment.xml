@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="8e6af7df471222104bebe454116d43b5" extends="task" label="Appointment" max_length="40" name="u_appointment" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="New Date/Time" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Patient Checks In" max_length="40" name="u_patient_checks_in" type="glide_date_time"/>
+        <element label="Patient Check In" max_length="40" name="u_patient_check_in" type="boolean"/>
+    </element>
+</database>

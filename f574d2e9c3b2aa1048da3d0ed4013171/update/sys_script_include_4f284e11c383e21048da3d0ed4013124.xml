@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.PatientUtilsClient</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Client-side script include to fetch patient details and use it in a client script.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>PatientUtilsClient</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var PatientUtilsClient = Class.create();
+PatientUtilsClient.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	fetchPatientDetails: function(){
+		var patientId = this.getParameter('sysparm_patient_id');
+		var gr = new GlideRecord('u_patient_record');
+		if(gr.get(patientId)){
+			var result = {
+				name : gr.u_first_name+ ' ' + gr.u_last_name,
+				age : gr.getValue('u_age1').toString(),
+				gender : gr.getValue('u_gender').toString(),
+				vip : gr.getValue('u_vip').toString()
+			};
+			return JSON.stringify(result);
+		}
+		else return JSON.stringify({error : 'Record not found'});
+	},
+    type: 'PatientUtilsClient'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-29 07:16:08</sys_created_on>
+        <sys_id>4f284e11c383e21048da3d0ed4013124</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>PatientUtilsClient</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_update_name>sys_script_include_4f284e11c383e21048da3d0ed4013124</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-29 07:40:41</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>4f284e11c383e21048da3d0ed4013124</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-29 07:16:07</sys_created_on>
+        <sys_id>2f8a8a15c3c3e21048da3d0ed401313b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-29 07:16:07</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

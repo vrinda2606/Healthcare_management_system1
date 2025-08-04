@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Client-side script include to fetch patient details and use it in a client script.</description>
+        <field>u_patient_id</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Patient Details Client 5</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+
+	var ga = new GlideAjax('global.PatientUtilsClient');
+	ga.addParam('sysparm_name', 'fetchPatientDetails');
+	ga.addParam('sysparm_patient_id', newValue);
+	ga.getXMLAnswer(response);
+
+	function response(v) {
+		if (!v.error) {
+			v=JSON.parse(v);
+			g_form.setValue('u_patient_name', v.name);
+			g_form.setValue('u_patient_age', v.age);
+			g_form.setValue('u_patient_gender', v.gender);
+			g_form.setValue('u_vip', v.vip);
+		} else {
+			g_form.showFieldMsg('u_patient', 'Patient not found', 'error');
+		}
+	}
+
+	//Type appropriate comment here, and begin script below
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-28 20:53:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>74457f4dc3c7a21048da3d0ed401315c</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Patient Details Client 5</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management Application" source="f574d2e9c3b2aa1048da3d0ed4013171">f574d2e9c3b2aa1048da3d0ed4013171</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">f574d2e9c3b2aa1048da3d0ed4013171</sys_scope>
+        <sys_update_name>sys_script_client_74457f4dc3c7a21048da3d0ed401315c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-29 07:33:00</sys_updated_on>
+        <table>u_appointment</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
